@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lê Minh Quân</title>
+    <link rel="stylesheet" href="Infor-student.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<style>
+    body {
+        background-image: url("hinhanh/background8.png");
+    }
+</style>
+<header>
+    <div class ="logo">
+        <img width="150" src="hinhanh/logo2.jpeg" alt="">
+        <img width="150" src="hinhanh/logo3.jpeg" alt="">
+    </div>
+    <div class="menu">
+        <li> <a href="" class="menu-size">ĐĂNG KÝ TƯ VẤN </a></li>
+        <li class="menu-size"><a href="Teacher.html">GIÁO VIÊN</a>
+            <ul class="sub-menu">
+                <li><a href="">TOEICC</a></li>
+                <li><a href=""> TOEFL</a></a></li>
+                <li><a href="">IELTS</a></li>
+                <li><a href=""> Tiếng Anh trẻ em</a></li>
+                <li><a href=""> Tiếng anh Giao tiếp</a></li>
+                <li><a href=""> Toán tiếng anh</a></li>
+            </ul>
+        </li>
+        <li class="menu-size"><a href="">HỌC VIÊN </a>
+            <ul class="sub-menu">
+                <li><a href=""> chuyện thành công</a></li>
+                <li><a href="">Phương pháp học</a></li>
+                <li><a href="">Kho tài liệu miễn phí</a></li>
+            </ul>
+        </li>
+        <li class="menu-size"><a href="">CHƯƠNG TRÌNH </a>
+            <ul class="sub-menu">
+                <li><a href="">Tiếng anh giao tiếp</a></li>
+                <li><a href="">Luyện thi Toeic</a></li>
+                <li><a href="">Luyện thi Toefl</a></li>
+                <li><a href="">Luyện thi Ielts</a></li>
+            </ul>
+        </li>
+
+        <li class="menu-size"><a href="">TUYỂN DỤNG </a></li>
+        <li class="menu-size"><a href="">LIÊN HỆ </a></li>
+
+    </div>
+    <div class="other">
+        <li><input type="text" placeholder="tìm kiếm"><i class="fa fa-search"></i></li>
+
+        <li> <a class="fa fa-home" href="wed.html"> Trang chủ</a></li>
+    </div>
+</header>
+
+<main>
+
+    <div class="main-container">
+        <div class="profile-sidebar">
+            <div class="profile-userpic">
+                <img  src="hinhanh/avatarQuan.jpeg">
+            </div>
+            <div class="profile-usertitle">
+                <div class="profile-username"> Lê Minh Quân </div>
+                <div class="profile-job"> Student </div>
+            </div>
+            <div class="profile-userbuttons">
+                <button type="button" class="btn btn-danger btn-sm">Thoát ra</button>
+            </div>
+
+            <div class="infor-container">
+                <ul>
+                    <li><a href="javascript:void(0);" id="thongtincanhan" onclick="hien(this)">Thông Tin Cá Nhân</a></li>
+                    <li><a href="javascript:void(0);" id="lichhoc" onclick="hien1(this)">Lịch Học</a></li>
+                    <li><a href="">Đăng Ký Lớp Học</a></li>
+                    <li><a href="">Hướng Dẫn Tra Cứu</a></li>
+                </ul>
+            </div>
+        </div>
+        <!---------------------table---------------- -->
+
+        <div class="conteiner-calender" >
+            <div class="calender-title">
+                <div class="caption">
+                    <span>Lịch Học, Lịch Thi</span>
+                </div>
+                <div class="actions">
+                    <div class="radio-inline">
+                        <tr>
+                            <td ><input type="radio" name="choice" id="choice-all" >Tất cả
+                            <td><input type="radio" name="choice" id="choice-class">Lịch thi
+                            <td><input type="radio" name="choice" id="choice-test">Lịch học
+                            <td><input type="datetime-local"></td>
+                            <td><button type="button" onclick="print()">In Lịch</button>
+                            <td><button type="button" >< Trở về</button> </td>
+                            <td><button type="button">Kế Tiếp ></button> </td>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+            <div class="table-calender">
+                <table class="table" role="grid" border="1">
+                    <thead>
+                    <tr role="row">
+                        <th>Ca Học  </th>
+                        <th> Thứ 2 <br> 26/07/2021  </th>
+                        <th> Thứ 3 <br> 27/07/2021 </th>
+                        <th> Thứ 4 <br> 28/07/2021  </th>
+                        <th> Thứ 5 <br> 29/07/2021  </th>
+                        <th> Thứ 6 <br> 30/07/2021  </th>
+                        <th> Thứ 7 <br> 31/07/2021  </th>
+                        <th> Chủ Nhật <br> 01/08/2021</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr role="row">
+                        <td style="height: 150px">Sáng</td>
+                        <td style="height: 150px">TOEIC
+                            <br>
+                            7h-9h
+                            <br>
+                            TOEFL
+                            <br>
+                            9h-11h
+                        </td>
+                        <td style="height: 150px">TOEFL
+                            <br>
+                            7h-9h
+                            <br>
+                            Toán tiếng anh
+                            <br>
+                            9h-11h
+                        </td>
+                        <td style="height: 150px">TOEIC
+                            <br>
+                            7h-9h
+                            <br>
+                            TOEFL
+                            <br>
+                            9h-11h
+                        </td>
+                        <td style="height: 150px">TOEFL
+                            <br>
+                            7h-9h
+                            <br>
+                            TOEIC
+                            <br>
+                            9h-11h
+                        </td>
+                        <td style="height: 150px">TOEFL
+                            <br>
+                            7h-9h
+                            <br>
+                            TOEFL
+                            <br>
+                            9h-11h
+                        </td>
+                        <td style="height: 150px">IELTS
+                            <br>
+                            7h-9h
+                            <br>
+                            TOEFL
+                            <br>
+                            9h-11h
+                        </td>
+                        <td style="height: 150px">Toán tiếng anh
+                            <br>
+                            7h-9h
+                            <br>
+                            TOEFL
+                            <br>
+                            9h-11h
+                        </td>
+                    </tr>
+                    <tr role="row">
+                        <td style="height: 150px">Chiều</td>
+                        <td style="height: 150px">Tiếng anh Giao tiếp
+                            <br>
+                            13hh-15hh
+                            <br>
+                            TOEFL
+                            <br>
+                            15hh-17h
+                        </td>
+                        <td style="height: 150px">Toán tiếng anh
+                            <br>
+                            13hh-15hh
+                            <br>
+                            TOEFL
+                            <br>
+                            15hh-17h
+                        </td>
+                        <td style="height: 150px">Tiếng anh Giao tiếp
+                            <br>
+                            13hh-15hh
+                            <br>
+                            TOEFL
+                            <br>
+                            15hh-17h
+                        </td>
+                        <td style="height: 150px">IELTS<br>
+                            13hh-15hh
+                            <br>
+                            TOEFL
+                            <br>
+                            15hh-17h
+                        </td>
+                        <td style="height: 150px">Tiếng anh Giao tiếp<br>
+                            13hh-15hh
+                            <br>
+                            TOEFL
+                            <br>
+                            15hh-17h
+                        </td>
+                        <td style="height: 150px">Toán tiếng anh<br>
+                            13hh-15hh
+                            <br>
+                            TOEFL
+                            <br>
+                            15hh-17h
+                        </td>
+                        <td style="height: 150px">IELTS<br>
+                            13hh-15hh
+                            <br>
+                            TOEFL
+                            <br>
+                            15hh-17h
+                        </td>
+                    </tr>
+                    <tr role="row">
+                        <td style="height: 150px">Tối</td>
+                        <td style="height: 150px">Tiếng Anh trẻ em
+                            <br> 19h-21h
+                        </td>
+                        <td style="height: 150px">Tiếng Anh trẻ em
+                            <br> 19h-21h
+                        </td>
+                        <td style="height: 150px">Tiếng Anh trẻ em
+                            <br> 19h-21h
+                        </td>
+                        <td style="height: 150px">Tiếng Anh trẻ em
+                            <br> 19h-21h
+                        </td>
+                        <td style="height: 150px">Tiếng Anh trẻ em
+                            <br> 19h-21h
+                        </td>
+                        <td style="height: 150px">Tiếng Anh trẻ em
+                            <br> 19h-21h
+                        </td>
+                        <td style="height: 150px">Tiếng Anh trẻ em
+                            <br> 19h-21h
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-------------------- end table ---------------- -->
+        <div class="my-infor">
+            <div class = "infor-form">
+                <form action="" method="post">
+                    <fieldset class="thongtintaikhoan" style="display: none">
+                        <legend><b>Thông tin tài khoản</b></legend>
+                        <table>
+                            <tr>
+                                <td><u>Tên tài khoản:</u></td>
+                                <td class="d"><output >leminhquan_kf20</output></td>
+                            </tr>
+                            <tr>
+                                <td><u>Mật khẩu:</u></td>
+                                <td class="d"><output > **********</output></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset class="thongtincanhan">
+                        <legend><b>Thông tin cá nhân</b></legend>
+                        <table>
+                            <tr>
+                                <td><u>Họ tên:</u></td>
+                                <td class="d"><output>Lê Minh Quân</output></td>
+                            </tr>
+                            <tr>
+                                <td><u>Email:</u></td>
+                                <td class="d"><output> quanptit1996@gmail.com</output></td>
+                            </tr>
+                            <tr>
+                                <td><u>Số điện thoại:</u></td>
+                                <td class="d"><output>035.291.3862</output></td>
+                            </tr>
+                            <tr>
+                                <td><u>Lớp:</u></td>
+                                <td class="d">K20-PF03</td>
+                            </tr>
+                            <tr>
+                                <td><u>Địa chỉ:</u></td>
+                                <td class="d">
+                                    94/37 Hẻm 94, phường Phước Long B, Quận 9, Thành phố Thủ Đức
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><u>Nghề nghiệp:</u></td>
+                                <td class="d">
+                                    Student
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><u>Ngày sinh:</u></td>
+                                <td class="d">01/04/1996</td>
+                            </tr>
+                            <tr>
+                                <td><u>Giới tính:</u></td>
+                                <td class="d">Nam</td>
+
+                            </tr>
+                            <tr>
+                                <td><u>Avatar:</u></td>
+                                <td><input type="file" name="avatar" id="filAvatar"></td>
+                            </tr>
+                            <tr>
+                                <td><u>Thông tin thêm:</u></td>
+                                <td><textarea name="thongtin" id="txtThongtin" cols="20" rows="10"></textarea> </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+<div class="footer-top">
+    <li><a href=""> <img src="hinhanh/dathongbao.webp" alt="">  </a> </li>
+    <li><a href="">Liên hệ </a></li>
+    <li><a href="">Tuyển dụng </a></li>
+    <li><a href="">Giới thiệu </a></li>
+    <li>
+        <a href="" class="fa fa-facebook-f"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-youtube"></a>
+    </li>
+</div>
+<div class="footer-center">
+    <p>
+        Công ty Cổ phần Quân Thư với số đăng ký kinh doanh: 83999988888111 <br>
+        Địa chỉ đăng ký: Tầng 2, The Emporium Tower, 184 Lê Đại Hành, Phường 15, Quận 11, Thành phố Hồ Chí Minh<br>
+        Đặt hàng online :<b> 035 291 3862</b>
+    </p>
+    <div class="footer-bottom">
+        ©EnlishOnline All rights reserved
+    </div>
+</div>
+</body>
+<script>
+    function hien(e){
+        var x = document.querySelector(".thongtincanhan")
+        var x1 = document.querySelector(".thongtintaikhoan")
+        var x2 = document.querySelector(".conteiner-calender")
+
+        if(x.style.display === "none" && x1.style.display === "none"){
+            x2.style.display="none";
+            x.style.display="block";
+            x1.style.display="block";
+        }
+        else{
+            x.style.display="none";
+            x1.style.display="none";
+        }
+    }
+
+    function hien1(e) {
+        var x = document.querySelector(".thongtincanhan")
+        var x1 = document.querySelector(".thongtintaikhoan")
+        var x2 = document.querySelector(".conteiner-calender")
+        if(x2.style.display === "none" ){
+            x.style.display="none";
+            x1.style.display="none";
+            x2.style.display="block";
+        }
+        else{
+            x2.style.display="none";
+        }
+    }
+
+
+</script>
+
+
+</html>

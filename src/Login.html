@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>Đăng Nhập</title>
     <meta charset="UTF-8">
-    <title>Lê Minh Quân</title>
-    <link rel="stylesheet" href="Homestyle.css">
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Login.css">
+
+
+    <!---- <script src="app.js"></script> -->
 </head>
 <body>
 <header>
-    <div class ="logo">
-        <img width="150" src="hinhanh/logo2.jpeg" alt="">
+    <div class="logo">
+        <img width="150" src="hinhanh/logo2.jpeg"  alt="">
         <img width="150" src="hinhanh/logo3.jpeg" alt="">
     </div>
     <div class="menu">
-        <li> <a href="" class="menu-size">ĐĂNG KÝ TƯ VẤN </a></li>
-        <li class="menu-size"><a href="Teachers.html">TÌM GIÁO VIÊN</a>
+        <li><a href="">ĐĂNG KÝ TƯ VẤN </a></li>
+        <li><a href="Teacher.html">GIÁO VIÊN</a>
             <ul class="sub-menu">
                 <li><a href="">TOEICC</a></li>
                 <li><a href=""> TOEFL</a></a></li>
@@ -25,14 +28,14 @@
                 <li><a href=""> Toán tiếng anh</a></li>
             </ul>
         </li>
-        <li class="menu-size"><a href="">HỌC VIÊN </a>
+        <li><a href="">HỌC VIÊN </a>
             <ul class="sub-menu">
                 <li><a href=""> chuyện thành công</a></li>
                 <li><a href="">Phương pháp học</a></li>
                 <li><a href="">Kho tài liệu miễn phí</a></li>
             </ul>
         </li>
-        <li class="menu-size"><a href="">CHƯƠNG TRÌNH </a>
+        <li><a href="">CHƯƠNG TRÌNH </a>
             <ul class="sub-menu">
                 <li><a href="">Tiếng anh giao tiếp</a></li>
                 <li><a href="">Luyện thi Toeic</a></li>
@@ -41,8 +44,8 @@
             </ul>
         </li>
 
-        <li class="menu-size"><a href="">TUYỂN DỤNG </a></li>
-        <li class="menu-size"><a href="">LIÊN HỆ </a></li>
+        <li><a href="">TUYỂN DỤNG </a></li>
+        <li><a href="">LIÊN HỆ </a></li>
 
     </div>
     <div class="other">
@@ -52,25 +55,47 @@
         <li> <a class="fa fa-home" href="wed.html"> Trang chủ</a></li>
     </div>
 </header>
-<section id="Slider">
-    <div class="aspect-ratio-169">
-        <img src="hinhanh/Background.jpg" alt="" >
-        <img src="hinhanh/Background6.jpeg" alt="">
-        <img src="hinhanh/Background7.jpeg" alt="">
-        <img src="hinhanh/Background4.png" alt="">
-        <img src="hinhanh/Background5.jpeg" alt="">
-    </div>
-    <div class="dot-container">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+<section>
+    <div class="container">
+        <div class="login-form">
+            <form action="" method="post" role="form">
+                <h1>Đăng nhập </h1> <br>
+                <div class="input-box">
+                    <p>Tên đăng nhập</p>
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="username" placeholder="Nhập username">
+                </div>
+                <br>
+                <div class="input-box">
+                    <p>Mật khẩu</p>
+                    <i class="fa fa-lock"></i>
+                    <input type="password" id="password" placeholder="Nhập mật khẩu" >
+                </div>
+                <div >
+                    <label id="mess" hidden value="">
+                    </label>
+                </div>
+                <div class="input-box3">
+                    <input type="checkbox" >Remember </input>
+                </div>
+
+                <div class="btn-box">
+                    <button type="button" onclick="submitlogin()">
+                        Đăng nhập
+                    </button>
+                    <button type="submit">
+                        <a href="Register.html">Đăng ký</a>
+                    </button>
+                    <a href="#">Quên mật khẩu?</a>
+
+                </div>
+            </form>
+        </div>
     </div>
 </section>
 <!-------------------------App---------------------------------- -->
 <section class="app-container">
-    <p>Tải ứng dụng Enlish Online</p>
+    <p class="centter">Tải ứng dụng Enlish Online</p>
     <div class="app">
         <img src="hinhanh/googleplay.jpg.webp" alt="">
         <img src="hinhanh/appstore.jpg.webp" alt="">
@@ -100,42 +125,6 @@
         ©EnlishOnline All rights reserved
     </div>
 </div>
+<script src="app.js"></script>
 </body>
-<script>
-
-    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
-    const imgContainer = document.querySelector(".aspect-ratio-169")
-    const dotItem = document.querySelectorAll(".dot") //lấy mấy thằng .dot ở trên
-    let imgNumber = imgPosition.length
-    let index = 0
-    // console.log(imgPosition)
-    imgPosition.forEach(
-        function (image,index){
-            image.style.left = index*100 +"%"//tạo dãy ảnh không có sẽ bị chồng lên 1 khung
-            dotItem[index].addEventListener("click",function (){
-                slider(index)
-                //chức năng tạo bởi function slider ở dưới
-                //bấm con trỏ vào chấm tròn sẽ thay đổi slide
-            })
-        })
-    function imgSlide() {
-        index++;
-        console.log(index)//theo dõi tiến trình "kiễm tra" (console) bên web test
-        if( index >= imgNumber){
-            index = 0
-        }
-        imgContainer.style.left="-"+index*100+"%"
-        //lúc đầu cho index = 0,sau đó 3s, hàm function imgSlide sẽ chạy 1 lần,sau đó index tăng thêm 1
-        // thì lúc đó thẻ imgContainer dịch chuyễn sang bên trái (âm - ) tương ứng với vị trí các thẻ con
-    }
-    function slider(index) {
-        imgContainer.style.left="-"+index*100+"%"
-        const dotActive = document.querySelector(".active")
-        dotActive.classList.remove("active")
-        dotItem[index].classList.add("active")//khi index chạy thì tương ứng dotItem cũng sẽ thêm cái class "active" vào
-    }
-    setInterval(imgSlide,3000)
-</script>
-
-
 </html>

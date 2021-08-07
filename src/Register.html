@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng ký</title>
+    <meta charset="UTF-8">
+
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Register.css">
+    <script src="app.js"></script>
+
+    <!---- <script src="app.js"></script> -->
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img width="150" src="hinhanh/logo2.jpeg" alt="">
+        <img width="150" src="hinhanh/logo3.jpeg" alt="">
+    </div>
+    <div class="menu">
+        <li><a href="">ĐĂNG KÝ TƯ VẤN </a></li>
+        <li><a href="Teacher.html">GIÁO VIÊN</a>
+            <ul class="sub-menu">
+                <li><a href="">TOEICC</a></li>
+                <li><a href=""> TOEFL</a></li>
+                <li><a href="">IELTS</a></li>
+                <li><a href=""> Tiếng Anh trẻ em</a></li>
+                <li><a href=""> Tiếng anh Giao tiếp</a></li>
+                <li><a href=""> Toán tiếng anh</a></li>
+            </ul>
+        </li>
+        <li><a href="">HỌC VIÊN </a>
+            <ul class="sub-menu">
+                <li><a href=""> chuyện thành công</a></li>
+                <li><a href="">Phương pháp học</a></li>
+                <li><a href="">Kho tài liệu miễn phí</a></li>
+            </ul>
+        </li>
+        <li><a href="">CHƯƠNG TRÌNH </a>
+            <ul class="sub-menu">
+                <li><a href="">Tiếng anh giao tiếp</a></li>
+                <li><a href="">Luyện thi Toeic</a></li>
+                <li><a href="">Luyện thi Toefl</a></li>
+                <li><a href="">Luyện thi Ielts</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">TUYỂN DỤNG </a></li>
+        <li><a href="">LIÊN HỆ </a></li>
+
+    </div>
+    <div class="other">
+        <li><input type="text" placeholder="tìm kiếm"><i class="fa fa-search"></i></li>
+        <li> <a class="fa fa-user" href="Login.html"><br>Đăng nhập</a></li>
+        <li> <a class="fa fa-unlock keyhole" href="Register.html"> Đăng Ký</a></li>
+        <li> <a class="fa fa-home" href="wed.html"> Trang chủ</a></li>
+    </div>
+</header>
+<section class="container">
+    <div class = "sign-form">
+        <form action="" method="post">
+            <fieldset class="thongtintaikhoan">
+                <legend><b>Thông tin tài khoản</b></legend>
+                <table>
+                    <tr>
+                        <td>Tên tài khoản:</td>
+                        <td><input type="text" name="tenTK" id="txtTenTK"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input type="password" name="mk" id="txtMK" required></td>
+                    </tr>
+                    <tr>
+                        <td>Xác nhận mật khẩu:</td>
+                        <td><input type="password"  id="txtMK2" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset class="thongtincanhan">
+                <legend><b>Thông tin cá nhân</b></legend>
+                <table>
+                    <tr>
+                        <td>Họ tên:</td>
+                        <td><input type="text" name="hoTen" id="txthoTen"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" id="txtemail"></td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại:</td>
+                        <td><input type="text" name="sdt" id="txtsdt"></td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ:</td>
+                        <td>
+                            <input type="text" name="sonha" id="txtSonha" placeholder="Số nhà">
+                            <input type="text" name="phuongxa" id="txtPhuongxa" placeholder="Phường xã">
+                            <input type="text" name="quanhuyen" id="txtQuanhuyen" placeholder="Quận huyện">
+                            <input type="text" name="TinhTP" id="txtTinhTP" placeholder="Tỉnh/TP">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nghề nghiệp:</td>
+                        <td>
+                            <select name="nghenghiep" id="cboNgheNghiep">
+                                <option value="hssv">Học sinh - Sinh viên</option>
+                                <option value="nvvp">Nhân viên văn phòng</option>
+                                <option value="cn">Công nhân</option>
+                                <option value="khac">Khác</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ngày sinh:</td>
+                        <td><input type="date" name="ngaysinh" id="dtpNgaysinh"></td>
+                    </tr>
+                    <tr>
+                        <td id="gioitinh">Giới tính:</td>
+                        <td><input type="radio" name="gioitinh" value="Nam">Nam
+                            <input type="radio" name="gioitinh" value="Nữ">Nữ</td>
+                    </tr>
+                    <tr>
+                        <td>File đính kèm:</td>
+                        <td><input type="file" name="avatar" id="filAvatar"></td>
+                    </tr>
+                    <tr>
+                        <td>Thông tin thêm:</td>
+                        <td><textarea name="thongtin" id="txtThongtin" cols="20" rows="10"></textarea> </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset class="button">
+                <button type="submit" onclick="send()">Đăng ký </button>
+                <button type="reset">Hủy bỏ</button>
+            </fieldset>
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-------------------------App---------------------------------- -->
+<section class="app-container">
+    <p class="centter">Tải ứng dụng Enlish Online</p>
+    <div class="app">
+        <img src="hinhanh/googleplay.jpg.webp" alt="">
+        <img src="hinhanh/appstore.jpg.webp" alt="">
+    </div>
+    <p>Đăng ký nhận tin Enlish Online</p>
+    <input type="text" placeholder="Nhập email của bạn...">
+</section>
+<!--------------------------footer----------------------------- -->
+<div class="footer-top">
+    <li><a href=""> <img src="hinhanh/dathongbao.webp" alt="">  </a> </li>
+    <li><a href="">Liên hệ </a></li>
+    <li><a href="">Tuyển dụng </a></li>
+    <li><a href="">Giới thiệu </a></li>
+    <li>
+        <a href="" class="fa fa-facebook-f"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-youtube"></a>
+    </li>
+</div>
+<div class="footer-center">
+    <p>
+        Công ty Cổ phần Quân Thư với số đăng ký kinh doanh: 83999988888111 <br>
+        Địa chỉ đăng ký: Tầng 2, The Emporium Tower, 184 Lê Đại Hành, Phường 15, Quận 11, Thành phố Hồ Chí Minh<br>
+        Đặt hàng online :<b> 035 291 3862</b>
+    </p>
+    <div class="footer-bottom">
+        ©EnlishOnline All rights reserved
+    </div>
+</div>
+<script src="CheckRegister.js"></script>
+
+</body>
+</html>

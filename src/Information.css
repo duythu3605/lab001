@@ -1,0 +1,79 @@
+
+
+.app-container{
+    text-align: center ;
+    align-items: center;
+    padding: 150px 0 50px 0; /* Căn chỉnh vị trí app */
+}
+.app{
+    margin: 50px;
+}
+.app img{
+    height: 50px ;
+}
+.app-container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bolder;
+}
+.app-container input{
+    margin-top: 50px;
+    border: none;
+    border-bottom : 2px solid saddlebrown;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+}
+
+
+
+
+.footer{
+    text-align: center;
+}
+.footer-top{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+.footer-top img{
+    height: 60px;
+}
+.footer-top li{
+    padding: 0 12px;
+    position: relative;/* giữa các app footer*/
+}
+.footer-top li a{
+    color: black; /* chỉnh màu */
+}
+.footer-top li:after{
+    content:""; /* tạo liền gạch ở giữa các app*/
+    display: block;
+    width: 1px;
+    height: 80%;
+    background:  #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);/* căn chỉnh vị trí nét gạch giữa các app*/
+}
+.footer-top li:last-child:after{
+    display: none; /* Xoá gạch cuối ở các app vị trí cuối*/
+}
+
+.footer-top li:last-child a{
+    margin-right: 22px; /* khoảng cách giữa các app*/
+}
+.footer-center{
+    text-align: center;
+}
+.footer-bottom{
+    margin: 20px 0;
+
+}

@@ -1,0 +1,331 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial,Helvetica , sans-serif;
+    box-sizing: border-box;
+
+}
+/*-------------------------------header------------------------*/
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    /* cho header nằm trùng vào line trang chủ*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255,225,255,0.3);
+
+}
+
+.logo{
+    flex: 1;
+    margin-top: 50px;
+
+}
+.menu{
+    flex: 3;
+    display: flex;
+    font-size: 20px;
+}
+.menu li a{
+    font-size: 18px;
+    text-align: center;
+}
+.menu > li {
+    padding:0 40px ;
+    position: relative;
+}
+.sub-menu {
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    /* tạo khung cho menu*/
+    z-index: 1;
+    background: bisque;
+}
+.menu > li:hover .sub-menu{
+    visibility: visible;
+    top: 50px;
+    /* khi trỏ vào sẽ hiện ra menu*/
+}
+.sub-menu ul a{
+    font-weight: normal!important;
+    font-size: 12px!important;
+}
+
+.sub-menu li a:hover {
+    background-color: #009549;
+    font-weight: bold;
+    color: black;
+}
+
+
+.menu  li  a{
+    font-weight: bold!important;
+    display: block;
+    line-height: 20px ;
+    color: darkcyan;
+    font-size: 20px;
+}
+
+.other{
+    flex: 1px;
+    display: flex;
+}
+.other >li{
+    padding:0 12px;
+    position: relative; /*giữa các app header*/
+}
+.other li:after{ /* cuối line app header*/
+    content:""; /* tạo liền gạch ở giữa các app*/
+    display: block;
+    width: 2px;
+    height: 50%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.other li:last-child:after{
+    display: none; /* Xoá gạch cuối ở các app vị trí cuối*/
+}
+.other  li:first-child{
+    position: relative;
+}
+.other > li:first-child input{
+    width: 200px;
+    border: none;
+    text-align: center;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid #444444;
+} /* thanh công cụ tìm kiếm*/
+.other  li:first-child i{
+    position: absolute;
+    right: 10px;
+}
+#Slider{
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+
+    /* tạo lằn rạch ngang đen cuối trang*/
+}
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+}/*seach gg về aspect ratio của trang viblo */
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/*-----------------------------main--------------------------------*/
+.main-container{
+    height: 700px;
+    width: 900px;
+    background: antiquewhite;
+    margin: 50px auto;
+    display: flex;
+    margin-top: 100px;
+}
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    width: 20%;
+    background: antiquewhite;
+}
+.profile-userpic img {
+
+    margin-left: 50px;
+    width: 50%;
+    height: 20%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+.profile-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 60;
+    margin-bottom: 7px;
+}
+.profile-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 60;
+    margin-bottom: 15px;
+}
+
+.infor-container li a:hover {
+    background-color: #959584;
+    font-weight: bold;
+    color: black;
+}
+.active {
+    background-color: #58257b;
+    color: red;
+}
+.infor-container ul {
+    list-style-type: none;
+    width: 200px;
+    background-color: white;
+    border: 1px solid greenyellow; /*---Thêm đường viền dưới*/
+    position: relative; /*Cố định khi cuộn*/
+
+}
+.infor-container ul li a{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+.infor-container li:last-child {
+    border-bottom: none;
+}
+
+.conteiner-calender{
+    height: 500px;
+    width: 700px;
+    padding: 30px;
+    color: black;
+    min-height: 20px;
+    border-radius: 4px !important;
+    text-align: center;
+}
+.caption{
+    font-size: 20px;
+    color: navy;
+}
+.table-calender{
+    padding: 30px;
+
+}
+.table-calender tr{
+    font-weight: bold;
+
+}
+
+
+/*!* Thay đổi màu liên kết khi di chuột qua *!*/
+
+
+
+/* ------------------------- footer ----------------------------- */
+#Slider{
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+
+    /* tạo lằn rạch ngang đen cuối trang*/
+}
+footer{
+    background-color: #cccccc;
+    min-height: 10px;
+    padding: 10px;
+}
+.app-container{
+    text-align: center ;
+    align-items: center;
+    padding: 150px 0 50px 0; /* Căn chỉnh vị trí app */
+}
+.app{
+    margin: 50px;
+}
+.app img{
+    height: 50px ;
+}
+.app-container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bolder;
+}
+.app-container input{
+    margin-top: 50px;
+    border: none;
+    border-bottom : 2px solid saddlebrown;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+}
+.footer{
+    text-align: center;
+}
+.footer-top{
+    display: flex;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+.footer-top img{
+    height: 60px;
+}
+.footer-top li{
+    padding: 0 12px;
+    position: relative;/* giữa các app footer*/
+}
+.footer-top li a{
+    color: black; /* chỉnh màu */
+}
+.footer-top li:after{
+    content:""; /* tạo liền gạch ở giữa các app*/
+    display: block;
+    width: 1px;
+    height: 80%;
+    background:  #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);/* căn chỉnh vị trí nét gạch giữa các app*/
+}
+.footer-top li:last-child:after{
+    display: none; /* Xoá gạch cuối ở các app vị trí cuối*/
+}
+
+.footer-top li:last-child a{
+    margin-right: 22px; /* khoảng cách giữa các app*/
+}
+.footer-center{
+    text-align: center;
+}
+.footer-bottom{
+    margin: 20px 0;
+}
